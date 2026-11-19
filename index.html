@@ -446,6 +446,91 @@ table.score td:last-child{font:400 26px var(--display);color:var(--accent)}
 }
 @media (prefers-reduced-motion:reduce){.lines{overflow-x:auto}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* 2026 editorial redesign preview — layout only; original content and functionality retained. */
+:root{--paper:#FAF8F4;--card:#F2EEE7;--ink:#251F1D;--muted:#665D56;--line:#DDD5CC;--accent:#7C292E}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#181613;--card:#24201C;--ink:#F5F0E8;--muted:#BDB0A3;--line:#453C34;--accent:#E6A093}}
+:root[data-theme="dark"]{--paper:#181613;--card:#24201C;--ink:#F5F0E8;--muted:#BDB0A3;--line:#453C34;--accent:#E6A093}
+body{font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{padding-inline:clamp(4px,2vw,24px)}
+.top{box-shadow:0 3px 18px rgba(30,20,15,.035)}
+.tabsbar{gap:8px;padding:8px 0 13px;scroll-padding-inline:24px}
+.tab{padding:8px 15px;border:1px solid transparent;border-radius:3px;font-size:12px;letter-spacing:.12em;transition:background .2s,color .2s,border-color .2s}
+.tab:hover{background:var(--card)}
+.tab[aria-current="page"]{border-color:var(--line);background:var(--card);color:var(--accent)}
+.hero{position:relative}
+.frame{filter:drop-shadow(0 14px 30px rgba(20,15,12,.075))}
+.frame-text h1{font-size:clamp(33px,4.4vw,52px);letter-spacing:.03em}
+.intro h2{font-size:clamp(38px,4vw,52px);line-height:1.08}
+.intro .just{font-size:20px;line-height:1.66;text-align:left}
+.intro .plate img{border-radius:2px}
+.contents{padding:52px clamp(20px,4vw,64px);background:var(--card);border-top-color:var(--line);border-bottom-color:var(--line)}
+.toc{width:min(100%,760px)}
+.toc a{padding:13px 8px;transition:background .2s,transform .2s;border-bottom:1px solid var(--line)}
+.toc li:last-child a{border-bottom:0}
+.toc a:hover{background:var(--paper);transform:translateX(4px)}
+.toc .t{letter-spacing:.005em}
+.sec-head{gap:14px;margin-bottom:62px}
+.sec-head h2{font-size:clamp(42px,6.2vw,78px);letter-spacing:-.025em}
+.sec-head .lede{max-width:55ch;font-size:20px;line-height:1.5}
+.sec-head .cap,.cap,.sc{letter-spacing:.14em}
+.sub-h{margin-top:88px}
+.cols3 > div,.stat,.chain li{transition:background .2s}
+.cols3 > div:hover,.stat:hover,.chain li:hover{background:var(--card)}
+.cols3 h3,.chain h3{letter-spacing:.02em}
+.cols3 p,.tools p,.chain p{font-size:18px;line-height:1.5}
+.plate figcaption{max-width:62ch}
+.reflect-grid p{font-size:20px;line-height:1.75}
+.pull{max-width:35ch;padding-block:30px;color:var(--accent)}
+.game{background:var(--card);border-color:var(--line);outline:0;border-radius:4px}
+.game-head{gap:12px}
+.game button,.pool button,.vs button,.answers button{transition:transform .17s,background .17s,border-color .17s}
+.game button:not(:disabled):hover,.pool button:not(:disabled):hover,.vs button:not(:disabled):hover,.answers button:not(:disabled):hover{transform:translateY(-2px)}
+.stat{padding:28px 24px}
+@media(min-width:901px){
+ .wrap,.top-in,.tabsbar{max-width:1180px}
+ .top-in{padding-block:16px}
+ .hero{grid-template-columns:minmax(130px,1fr) minmax(0,430px) minmax(130px,1fr);gap:48px;padding-block:70px 80px}
+ .intro{gap:clamp(60px,8vw,118px);padding-block:64px 112px}
+ .intro .just{max-width:48ch}
+ .sec{padding-block:108px}
+ .cols3 > div{padding-inline:36px}
+ .reflect-grid{gap:80px}
+ .lab-grid{gap:48px}
+}
+@media(max-width:900px){
+ .wrap{padding-inline:0}
+ .top-in{padding-block:10px}
+ .tabsbar{justify-content:flex-start;padding-inline:12px}
+ .tabsbar > :first-child{margin-left:0}
+ .tabsbar > :last-child{margin-right:0}
+ .hero{padding-block:36px 42px}
+ .frame{max-width:320px}
+ .intro{gap:30px;padding-block:20px 72px}
+ .contents{padding:36px 20px}
+ .sec-head{margin-bottom:38px}
+ .sec{padding-block:72px}
+ .reflect-grid{gap:30px}
+ .cols3 > div{padding:22px 12px}
+}
+@media(max-width:600px){
+ body{font-size:18px;line-height:1.55}
+ .top-in{padding-block:8px}
+ .mono{height:32px;width:32px}
+ .tab{padding:8px 11px;font-size:11px;letter-spacing:.07em}
+ .frame{max-width:min(82vw,310px)}
+ .frame-text h1{font-size:clamp(29px,8vw,40px)}
+ .intro h2{font-size:36px}
+ .intro .just{font-size:18px}
+ .sec{padding-block:56px;scroll-margin-top:115px}
+ .sec-head h2{font-size:clamp(36px,10vw,55px)}
+ .sec-head .lede{font-size:18px}
+ .toc .t{font-size:21px}
+ .reflect-grid p{font-size:18px}
+ .game{padding:20px 16px}
+ .stat{padding:22px 16px}
+ .sub-h{margin:58px 0 24px}
+}
 </style>
 
 <header class="top">
