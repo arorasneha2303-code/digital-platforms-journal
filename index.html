@@ -481,6 +481,103 @@ body{font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
  .stat{padding:22px 16px}
  .sub-h{margin:58px 0 24px}
 }
+
+/* VERSION TWO — designed as a contemporary editorial field journal */
+:root{--paper:#F5F2EB;--card:#EAE5DA;--ink:#201F26;--muted:#68636A;--line:#CFC8C0;--accent:#9B382F}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#151820;--card:#292A32;--ink:#F1EEE7;--muted:#BDB6B3;--line:#4F4A4A;--accent:#E6A093}}
+:root[data-theme="dark"]{--paper:#151820;--card:#292A32;--ink:#F1EEE7;--muted:#BDB6B3;--line:#4F4A4A;--accent:#E6A093}
+body{font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.65}
+body h1,body h2,body h3,body h4{font-family:var(--display)}
+.top{background:var(--paper);border-bottom:1px solid var(--ink);box-shadow:none}
+.top-in{grid-template-columns:1fr auto 1fr}
+.top-in .side-l,.top-in .side-r{font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:600}
+.tabsbar{gap:4px;padding:7px 0 12px}
+.tab{font-family:Arial,Helvetica,sans-serif;font-weight:600;font-size:10px;letter-spacing:.12em;border-radius:0}
+.tab[aria-current="page"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.wrap{max-width:1380px;padding-inline:clamp(0px,2vw,24px)}
+.journal-hero{display:grid;grid-template-columns:1.55fr .7fr;align-items:stretch;gap:0;padding:0;margin:35px 0 75px;min-height:590px;background:#242431;color:#F8F4EC;overflow:hidden}
+.journal-hero-main{padding:clamp(30px,5vw,74px);display:flex;flex-direction:column;min-width:0}
+.journal-eyebrow{font:600 11px/1.4 Arial,Helvetica,sans-serif;letter-spacing:.2em;display:flex;align-items:center;gap:13px}
+.journal-dot{width:9px;height:9px;background:#F2A888;border-radius:50%}
+.journal-divider{opacity:.4}
+.journal-edition{font:italic 25px/1.2 var(--body);color:#D5C6C1;margin-top:auto;margin-bottom:24px;display:flex;justify-content:space-between;gap:12px}
+.journal-edition span{font:600 10px Arial,Helvetica,sans-serif;letter-spacing:.14em;font-style:normal;align-self:flex-end}
+.journal-hero h1{font-family:Arial,Helvetica,sans-serif;font-weight:750;font-size:clamp(65px,9.7vw,150px);line-height:.83;letter-spacing:-.09em;white-space:nowrap}
+.journal-hero h1 em{font-family:var(--display);font-weight:400;letter-spacing:-.075em;font-style:italic;font-size:.84em}
+.journal-period{color:#F2A888}
+.journal-hero-footer{border-top:1px solid rgba(255,255,255,.32);padding-top:25px;margin-top:45px;display:flex;justify-content:space-between;gap:25px;align-items:end}
+.journal-hero-footer p{font:400 16px/1.5 Arial,Helvetica,sans-serif;color:#D7D2CE}
+.journal-cta{font:600 11px Arial,Helvetica,sans-serif;color:#242431;background:#F2A888;padding:16px 20px;text-decoration:none;letter-spacing:.08em;white-space:nowrap;transition:transform .2s,background .2s}
+.journal-cta:hover{background:#FFD0B3;transform:translateY(-3px)}
+.journal-cta span{margin-left:15px;font-size:19px}
+.journal-hero-aside{background:#F1AC88;color:#242431;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,3vw,42px);overflow:hidden}
+.journal-aside-top,.journal-aside-foot{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;font:700 11px/1.4 Arial,Helvetica,sans-serif;letter-spacing:.1em}
+.journal-orbit{width:100%;aspect-ratio:1;border:1px solid rgba(36,36,49,.48);border-radius:50%;display:grid;place-items:center;position:relative;transform:rotate(-16deg)}
+.journal-orbit:before,.journal-orbit:after{content:"";position:absolute;inset:13%;border:1px solid rgba(36,36,49,.45);border-radius:50%}
+.journal-orbit:after{inset:28%;border-width:2px}
+.journal-orbit-inner{font-family:var(--display);font-size:clamp(48px,7vw,110px);letter-spacing:-.1em}
+.journal-orbit-inner span{font:400 .42em Arial,Helvetica,sans-serif;vertical-align:middle;margin:0 8px}
+.journal-aside-foot{display:grid;gap:8px}
+.journal-aside-copy{max-width:26ch;font:400 18px/1.25 var(--display);letter-spacing:0}
+#home .intro{margin-top:0;align-items:stretch;gap:0;padding:0 0 110px;grid-template-columns:1.15fr 1fr}
+#home .intro .plate{background:var(--card);padding:clamp(20px,3vw,48px);align-content:center}
+#home .intro .plate img{max-height:370px;object-fit:cover}
+#home .intro > div{background:#E5E0D7;color:#242431;padding:clamp(28px,5vw,85px);display:flex;flex-direction:column;justify-content:center}
+#home .intro .script{color:#A23B32;font-size:27px}
+#home .intro h2{font-size:clamp(39px,4.5vw,65px);line-height:1.03;text-transform:none;letter-spacing:-.055em;margin:20px 0 25px}
+#home .intro .just{font:400 16px/1.8 Arial,Helvetica,sans-serif;color:#49434A;text-align:left;max-width:61ch}
+#home .intro .cap{font:700 10px Arial,Helvetica,sans-serif;letter-spacing:.09em;color:#675D5A}
+#home .intro .ulink{font:700 11px Arial,Helvetica,sans-serif;margin-top:35px;align-self:flex-start}
+#home .contents{display:block;background:transparent;border:0;padding:0 0 100px;margin-bottom:30px!important}
+#home .contents > .cap{display:block;color:var(--accent);font:700 12px Arial,Helvetica,sans-serif;letter-spacing:.15em;margin:0 0 22px}
+#home .toc{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;counter-reset:session}
+#home .toc li{background:var(--card);min-height:210px;display:flex}
+#home .toc li:nth-child(3n+2){background:#E3DBD0}
+#home .toc li:nth-child(3n){background:#D9D7D4}
+#home .toc li:last-child{background:#242431;color:#F8F4EC}
+#home .toc a{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:23px 25px 20px;text-decoration:none;border:1px solid transparent;transform:none;transition:transform .2s,box-shadow .2s}
+#home .toc a:hover{transform:translateY(-6px);background:transparent;box-shadow:0 12px 22px rgba(30,20,20,.09)}
+#home .toc .rn{font:italic 26px var(--display);color:var(--accent);width:auto}
+#home .toc .t{font-size:clamp(25px,3vw,40px);line-height:1.08;letter-spacing:-.03em;text-transform:none;max-width:15ch}
+#home .toc .tag{font:700 10px Arial,Helvetica,sans-serif;letter-spacing:.1em;margin-top:auto;color:inherit;opacity:.7}
+#home .toc .dots{display:none}
+#home .toc li:last-child .rn{color:#F2A888}
+.sec-head h2{font-size:clamp(42px,7vw,92px);letter-spacing:-.065em;text-transform:none}
+.sec-head{padding:36px 0}
+.sec-head .lede{font:400 18px/1.5 Arial,Helvetica,sans-serif}
+.sec{padding-block:100px}
+.sc,.cap{font-family:Arial,Helvetica,sans-serif;font-weight:600}
+@media(max-width:1100px){
+ .journal-hero{min-height:490px;grid-template-columns:1.4fr .65fr}
+ .journal-hero h1{font-size:clamp(57px,9vw,105px)}
+}
+@media(max-width:760px){
+ .journal-hero{grid-template-columns:1fr;margin:16px 0 40px;min-height:0}
+ .journal-hero-main{min-height:440px;padding:34px 25px}
+ .journal-hero h1{font-size:clamp(50px,12vw,87px)}
+ .journal-hero-aside{min-height:220px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:16px}
+ .journal-aside-top{grid-column:1/-1}
+ .journal-orbit{max-width:160px}
+ .journal-aside-copy{font-size:16px}
+ .journal-hero-footer{align-items:flex-start;flex-wrap:wrap}
+ #home .intro{grid-template-columns:1fr;gap:0;padding-bottom:68px}
+ #home .intro > div{padding:42px 27px}
+ #home .toc{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #home .toc li{min-height:178px}
+}
+@media(max-width:460px){
+ .journal-hero-main{min-height:400px}
+ .journal-eyebrow{font-size:9px;gap:7px}
+ .journal-edition{font-size:20px}
+ .journal-edition span{font-size:8px}
+ .journal-hero h1{font-size:clamp(43px,12vw,65px)}
+ .journal-hero-footer p{font-size:14px}
+ .journal-cta{font-size:10px;padding:12px 16px}
+ #home .toc{gap:8px}
+ #home .toc li{min-height:168px}
+ #home .toc a{padding:17px 13px}
+ #home .toc .t{font-size:clamp(22px,6vw,32px)}
+}
 </style>
 
 <header class="top">
@@ -502,38 +599,24 @@ body{font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
 
 <div class="panel" id="home" data-panel="home">
   <!-- COVER -->
-  <section class="hero" id="top">
-    <div class="side">
-      <span class="sc">ESSEC Business School</span>
-      <svg class="orn" viewBox="0 0 22 54" aria-hidden="true"><path d="M11 0 V40" stroke="currentColor" stroke-width="1"/><path d="M11 40 l5 7 -5 7 -5 -7 z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="11" cy="6" r="2" fill="currentColor"/><path d="M4 20 Q11 26 18 20" fill="none" stroke="currentColor" stroke-width="1"/></svg>
-    </div>
-    <div class="frame">
-      <svg viewBox="0 0 400 500" aria-hidden="true">
-        <defs><radialGradient id="vig" cx="50%" cy="42%" r="60%"><stop offset="0" style="stop-color:var(--paper);stop-opacity:.10"/><stop offset="1" style="stop-color:var(--paper);stop-opacity:0"/></radialGradient></defs>
-        <ellipse class="ov-line" cx="200" cy="250" rx="190" ry="238" stroke-width="1.2"/>
-        <ellipse class="ov-line" cx="200" cy="250" rx="180" ry="228" stroke-width="5" stroke-dasharray="0 10.5" stroke-linecap="round"/>
-        <ellipse class="ov-line" cx="200" cy="250" rx="170" ry="218" stroke-width="1"/>
-        <ellipse class="ov-fill" cx="200" cy="250" rx="162" ry="210"/>
-        <ellipse cx="200" cy="250" rx="162" ry="210" fill="url(#vig)"/>
-        <g class="ov-line" stroke-width="1.2">
-          <path d="M160 16 Q180 2 200 12 Q220 2 240 16"/><path d="M200 0 l7 9 -7 9 -7 -9 z"/>
-          <path d="M160 484 Q180 498 200 488 Q220 498 240 484"/><path d="M200 482 l7 9 -7 9 -7 -9 z"/>
-          <path d="M6 230 Q-2 250 6 270"/><path d="M394 230 Q402 250 394 270"/>
-        </g>
-      </svg>
-      <div class="frame-text">
-        <p class="sc">A course journal</p>
-        <span class="rule"></span>
-        <h1>Digital Platforms</h1>
-        <p class="script">six guest sessions</p>
-        <span class="rule"></span>
-        <p class="sc">Autumn 2026</p>
+  <section class="hero journal-hero" id="top">
+    <div class="journal-hero-main">
+      <div class="journal-eyebrow"><span class="journal-dot"></span> ESSEC BUSINESS SCHOOL <span class="journal-divider">/</span> AUTUMN 2026</div>
+      <p class="journal-edition">The learning archive <span>— Issue 01 / 06</span></p>
+      <h1>DIGITAL<br><em>PLATFORMS</em><span class="journal-period">.</span></h1>
+      <div class="journal-hero-footer">
+        <p>Ideas, experiments &amp; perspectives<br>from the future of marketing.</p>
+        <a href="#session1" class="journal-cta">Explore the journal <span aria-hidden="true">↗</span></a>
       </div>
     </div>
-    <div class="side">
-      <span class="sc">Notes, reflections &amp; games</span>
-      <svg class="orn" viewBox="0 0 22 54" aria-hidden="true"><path d="M11 0 V40" stroke="currentColor" stroke-width="1"/><path d="M11 40 l5 7 -5 7 -5 -7 z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="11" cy="6" r="2" fill="currentColor"/><path d="M4 20 Q11 26 18 20" fill="none" stroke="currentColor" stroke-width="1"/></svg>
-    </div>
+    <aside class="journal-hero-aside">
+      <div class="journal-aside-top"><span>FIELD NOTES</span><span>2026</span></div>
+      <div class="journal-orbit"><span class="journal-orbit-inner">D<span>✳</span>P</span></div>
+      <div class="journal-aside-foot">
+        <span>06 SESSIONS</span>
+        <span class="journal-aside-copy">One evolving perspective on digital creativity, AI and strategy.</span>
+      </div>
+    </aside>
   </section>
 
   <!-- INTRO -->
